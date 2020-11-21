@@ -18,8 +18,11 @@ from django.urls import path
 from django.conf.urls import include
 from lib import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('account/', include('django.contrib.auth.urls')),
+    path('accounts/', include('django.contrib.auth.urls') ),
     path('',views.home_view),
+
+    path('adminsignup', views.adminsignup_view),
 ]

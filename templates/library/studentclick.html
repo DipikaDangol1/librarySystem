@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -10,39 +9,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <title>Library Management</title>
-    <style>
-      .form-decoration{
-        float:left;
-        margin-left: 30px;
-        width:20px;
-      }
-      .feedback{
-        margin-left:30px;
-      }
-      .btn{
-        width:200px;
-      }
+    <style media="screen">
+    .jumbotron{
+      margin-top: 60px;
+    }
+    .jumbotron h3{
+      text-align: center;
+    }
     </style>
+
   </head>
   <body>
-    {% include "library/navbar.html" %}
+      {% include "library/navbar.html" %}
 <br><br>
-    
-<h3 class="feedback">Send us some feedback!</h3>
-  <div class="form-decoration">
-    
-    <form method="POST">
-        {% csrf_token %}
-        <div class = "form-group">
-            <p>
-            <h3>{{ form.as_p }}</h3>
+      <div class="jumbotron">
+        <h1><center>Hello, Student</center></h1>
+        <h3>Welcome to Online Library Management System.</h3>
+        <hr class="my-4">
+        <p>Please signup to access various features.</p>
+        <p class="lead">
+          <a class="btn btn-secondary btn-lg" href="studentsignup" role="button">SignUp</a>
+          <a class="btn btn-secondary btn-lg" href="studentlogin" role="button">Login</a>
         </p>
-            <br>
-            <input type="submit" value="Send" class = 'btn btn-secondary btn-lg'>
-                </div>
-              </form>
-    </div>
-    {% include "library/footer.html" %}
+      </div>
+      {% include "library/footer.html" %}
   </body>
 </html>

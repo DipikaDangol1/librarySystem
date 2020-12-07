@@ -59,11 +59,11 @@
     		margin-top: 2px;
     	}
         .signup-form .btn {
-          font-size: 16px;
-          font-weight: bold;
-    		  border: none;
-    		  margin-top: 20px;
-    		  min-width: 140px;
+            font-size: 16px;
+            font-weight: bold;
+    		border: none;
+    		margin-top: 20px;
+    		min-width: 140px;
         }
         .signup-form a {
     		color: #2b04ff;
@@ -81,8 +81,6 @@
     		text-decoration: underline;
     	}
     </style>
-
-
   </head>
   <body>
     {% include "library/navbar.html" %}
@@ -90,9 +88,10 @@
     <br>
     <div class="signup-form">
         <form  method="post" class="form-horizontal">
-            <center><h2>Admin Login</h2></center>
 
-          {% csrf_token %}
+    			<center><h2>Student Login</h2></center>
+
+{% csrf_token %}
             {% for field in form %}
             <div class="form-group">
               <label class="control-label col-xs-4">{{ field.label_tag }}</label>
@@ -108,9 +107,8 @@
     			</div>
     		</div>
         </form>
-    	<div class="text-center">Do not have account? <a href="adminsignup">Signup here</a></div>
+    	<div class="text-center">Do not have account? <a href="studentsignup">Signup here</a></div>
     </div>
-
     {% include "library/footer.html" %}
   </body>
 </html>

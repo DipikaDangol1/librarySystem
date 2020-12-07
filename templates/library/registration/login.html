@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
-    <form class=" " method="POST">
-        {{ form.as_p}}
-        { % csrf_token %}
-        <button type ="submit" name="button"> LOGIN</button>    
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Library Management</title>
+  </head>
+  <body>
+    <form class=""  method="post">
+      {{form.as_p}}
+      {% csrf_token %}
+      <button type="submit" name="button">LOGIN</button>
     </form>
-</body>
+  </body>
 </html>
